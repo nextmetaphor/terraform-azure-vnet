@@ -2,3 +2,4 @@
 tfplan
 .terraform*
 terraform.tfstate*
+crash.log

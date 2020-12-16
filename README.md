@@ -19,8 +19,16 @@ docker run -it -v $HOME/.azure:/root/.azure mcr.microsoft.com/azure-cli az login
 
 ### Create the Virtual Network
 ```bash
-# initialise 
-terraform init
+# set the values below to reflect the resource group and remote storage
+export TF_VAR_resource_group_name=
+export TF_VAR_storage_account_name=
+export TF_VAR_container_name=
+
+# initialise terraform 
+terraform init \
+  -backend-config "resource_group_name=$TF_VAR_resource_group_name" \
+  -backend-config "storage_account_name=$TF_VAR_storage_account_name" \
+  -backend-config "container_name=$TF_VAR_container_name"
 
 # create a terraform plan file from the provided variables
 # NOTE: the existing Azure resource group will need to be provided at the command-line, or manually added to the tfvars file 

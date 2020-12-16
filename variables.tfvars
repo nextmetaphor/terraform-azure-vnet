@@ -1,7 +1,7 @@
 vnet = {
-  suffix = "platform"
+  suffix     = "platform"
   cidr_block = "10.0.0.0/16"
-  region = "eastus"
+  location   = "eastus"
   subnets = {
     subnet1 = {
       cidr_block = "10.0.1.0/24"

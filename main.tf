@@ -10,7 +10,7 @@ data "azurerm_resource_group" "rg" {
 resource "azurerm_virtual_network" "vnet" {
   name                = local.vnet_name
   address_space       = [var.vnet.cidr_block]
-  location            = var.vnet.region
+  location            = var.vnet.location
   resource_group_name = data.azurerm_resource_group.rg.name
 
   tags = {
