@@ -3,6 +3,8 @@
 
 This creates an Azure virtual network and a number of subnets, as specified by the provided variables. Examine [variables.tf](variables.tf) to understand the variable structure; [variables.tfvars](variables.tfvars) for example values.
 
+![Azure Virtual Network and Subnets](terraform-azure-vnet.jpg)
+
 ## Install
 This module requires that the following are installed locally:
 * [Docker](https://www.docker.com/get-started)
